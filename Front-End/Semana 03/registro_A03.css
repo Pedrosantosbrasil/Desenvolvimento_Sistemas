@@ -1,0 +1,132 @@
+CSS
+
+
+body {
+    margin: 0; /* Remove as margens padrão do navegador */
+    font-family: Arial, sans-serif;
+    display: grid; /* Define o container como Grid */
+   
+    /* Define o "mapa" do site: o menu ocupa a esquerda e o resto se divide entre topo e principal */
+    grid-template-areas:
+        "menu cabecalho"
+        "menu principal";
+   
+   
+    grid-template-columns: 400px 1fr;
+    gap: 10px;
+}
+
+/* Estilização do Menu Lateral */
+.menu-lateral {
+    grid-area: menu; /* Vincula este bloco à área menu definida no body */
+    background-color: #f0f0f0;
+    padding: 15px;
+}
+
+/* Remove marcadores (bolinhas) e recuos da lista de navegação */
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.menu-lateral li {
+    margin: 10px 0;
+}
+
+
+.menu-lateral a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Faixa superior do site (Header) */
+.cabecalho {
+    grid-area: cabecalho; /* Vincula à área 'cabecalho' */
+    background: linear-gradient(90deg, #007bff, #00d084); /* Efeito de degradê moderno */
+    color: white;
+    padding: 15px;
+   
+    /* Flexbox para alinhar o título à esquerda e o botão à direita */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.cabecalho h1 {
+    margin: 0;
+}
+
+/* Botão com efeito de inversão de cores (Hover) */
+.btn-animate {
+    background-color: #fff;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 10px 20px;
+    cursor: pointer;
+    /* Suaviza a transição de cores em 0.3 segundos */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Quando o mouse passa por cima, as cores do botão se invertem */
+.btn-animate:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Área de conteúdo principal */
+.principal {
+    grid-area: principal; /* Vincula à área 'principal' */
+    display: flex;
+    flex-direction: column; /* Empilha os elementos um abaixo do outro */
+    gap: 10px;
+    padding: 15px;
+}
+
+/* Caixa de conteúdo com bordas arredondadas e animação de entrada */
+.content-box {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 5px;
+    /* Aplica a animação 'slideIn' definida abaixo */
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Definição da animação: o elemento surge de baixo (20px) para cima e ganha opacidade */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Regras para Celulares (telas até 768px) */
+@media (max-width: 768px) {
+    body {
+        /* Muda o grid para uma única coluna, empilhando tudo */
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "cabecalho"
+            "principal";
+    }
+    /* Esconde o menu lateral no mobile para economizar espaço */
+    .menu-lateral {
+        display: none;
+    }
+}
+
+/* Regras para Tablets (telas entre 769px e 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    body {
+        /* Reduz a largura do menu lateral de 400px para 180px */
+        grid-template-columns: 180px 1fr;
+    }
+    .menu-lateral {
+        width: 180px;
+    }
+}
