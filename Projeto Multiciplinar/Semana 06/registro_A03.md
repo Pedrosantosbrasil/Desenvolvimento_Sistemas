@@ -1,4 +1,4 @@
-Semana 01 - Aula 03
+Semana 06 - Aula 02
 
 Bruno de Lima
 
@@ -13,4 +13,4 @@ Pedro Henrique
 Julio Cesar
 
 ### Prints do Processo
-![Passo 1](./1c024dd8-d4f7-42f7-ba35-7a478442e468.jpg)
+![Passo 1](![alt text](image.png))
