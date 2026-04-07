@@ -1,1 +1,0 @@
-Não consigo realizar a tarefa, pois o notebook da escola não permite instalar o Android Studio.
