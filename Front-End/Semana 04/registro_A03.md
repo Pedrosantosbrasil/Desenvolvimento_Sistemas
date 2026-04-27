@@ -59,4 +59,8 @@ function showUserDetails(user) {
     `;
 }
 
+<<<<<<< HEAD
 // Essa função pega o Id da div, com as informacoes da api ela pega 5 tags do html (h2) e cria 04 paragrafosS
+=======
+// Essa função pega o Id da div, com as informacoes da api ela pega 5 tags do html (h2) e cria 04 paragrafos
+>>>>>>> 028f2fea01047511a04014a5e094768dd8c67e82
