@@ -1,0 +1,27 @@
+BRUNO DE LIMA
+
+BRUNO HENRIQUE
+
+EMILLY BACCALÁ
+
+ERICK PIETRO
+
+JULIO CESAR
+
+SEMANA 12 - AULA 01
+
+4.    Assim que preencherem a tabela, discutam em grupo quais são, na percepção de vocês, os requisitos mais importantes para o sucesso do projeto multidisciplinar:
+
+
+R: Criptografia dos dados; Compatível com os dispositivos; Layout Responsivo; Interface Simples e Intuitiva.
+
+
+a)    Listem um requisito funcional importante: 
+R: Opção do formulário junto ao de entrar ou cadastrar.
+
+b)    Listem um requisito não funcional importante: 
+R: Alto nível de segurança (MFA + Criptografia)
+
+AULA 02
+
+Imagem em anexo.

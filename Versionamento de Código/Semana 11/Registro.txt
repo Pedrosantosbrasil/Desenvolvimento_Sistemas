@@ -1,0 +1,19 @@
+Funcao renderizarTelaDePagamento()
+    / Lógica do Cupom
+    Se flag_cupom_desconto == verdadeiro Entao
+        ExibirCampo("Cupom de Desconto")
+    FimSe
+
+      Lógica do Pagamento Combinada
+    Se flag_pagamento_pix == verdadeiro Entao
+        ExibirBotao("Pagar com PIX")
+    Senao
+        ExibirBotao("Pagar com Cartão")
+    FimSe
+FimFuncao
+
+Cooperação: Obriga Ana e Bruno a conversarem diariamente para não quebrarem o mesmo arquivo (main). A comunicação foca em alinhar os contratos de código logo no início.
+
+Persistência: O mais difícil é manter a disciplina de quebrar tarefas grandes em commits pequenos e diários. Se alguém falhar por dias, recria o "inferno da fusão" (conflitos gigantes de merge).
+
+Benefício Real: Permite testar em produção com usuários reais (lançamento progressivo) e reverter bugs instantaneamente desligando a flag, sem precisar de um novo deploy.
