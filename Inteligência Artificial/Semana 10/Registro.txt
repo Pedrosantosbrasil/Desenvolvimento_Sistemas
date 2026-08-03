@@ -1,0 +1,78 @@
+SEMANA 10 / AULA 01
+
+
+
+
+1. Qual abordagem atende melhor o prazo de duas semanas?
+Modelo pronto + prompts. É a única que permite começar os testes no mesmo dia, garantindo que haverá algo pronto para a demo dos investidores.
+
+2. Qual cabe no orçamento de R$ 5.000?
+Todas cabem. O Fine-tuning completo custa R$ 3.000, e as outras duas opções custam bem menos ou quase zero, ficando todas dentro do limite.
+
+3. Qual tem menor risco de falhar?
+Modelo pronto + prompts. Como os modelos já estão treinados e validados pela comunidade (Realistic Vision / DreamShaper), não há risco de o treinamento dar errado ou estourar o prazo.
+
+
+
+
+AULA - 02
+
+
+
+
+1. Classe genérica escolhida
+
+Classe: dog
+
+2. Dois prompts de classe
+
+Class prompt 1:
+“A photo of a dog”
+
+Class prompt 2:
+“A photo of a brown dog”
+
+Esses prompts são genéricos, pois não indicam um cachorro específico. A IA deve gerar apenas um cachorro comum, sem identidade própria.
+
+3. Prompt de instância
+
+Instance prompt:
+“A photo of Rex, a small brown dog with a blue collar that says ‘Rex’, sitting on a gray couch in a living room”
+
+Esse prompt é mais específico porque traz nome, aparência, acessório e cenário. Assim, a IA tem mais detalhes para criar uma imagem personalizada.
+
+4. Observações
+
+No class prompt, a IA manteria a imagem mais genérica, criando apenas um cachorro comum, sem características únicas.
+
+No instance prompt, a imagem ficaria mais detalhada, mostrando um cachorro pequeno, marrom, com coleira azul escrito “Rex” e sentado em um sofá cinza.
+
+Conclusão
+
+O class prompt serve para gerar imagens gerais de uma classe, como “um cachorro”. Já o instance prompt serve para representar algo específico, como um cachorro chamado Rex, com características próprias. Isso se relaciona ao DreamBooth, que usa identificadores e exemplos para ensinar o modelo a gerar sujeitos personalizados.
+
+
+
+
+AULA 03
+
+
+
+
+1.Foram necessárias 3 tentativas. Primeiro fizemos um prompt simples, depois colocamos mais detalhes e, por último, ajustamos a iluminação, os olhos e a posição do gato.
+
+
+
+
+2.A cooperação ajudou porque cada pessoa deu uma ideia para melhorar a imagem. Um sugeriu detalhes do gato, outro a iluminação e outro o fundo. Quando tinham opiniões diferentes, o grupo escolhia a opção que deixava a imagem mais bonita.
+
+
+
+
+3.Prompt weighting é usado para dar mais importância a algo no prompt.
+Exemplo: (olhos verdes:1.2) para destacar os olhos.
+
+Negative prompt é usado para dizer o que não queremos na imagem.
+Exemplo: “borrado, patas extras, olhos tortos”.
+
+O weighting melhora o que queremos destacar, e o negative prompt ajuda a evitar erros.

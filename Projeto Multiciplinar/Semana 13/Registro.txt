@@ -1,0 +1,33 @@
+SEMANA 13 / AULA 01
+
+BRUNO DE LIMA
+
+BRUNO HENRIQUE
+
+EMILLY BACCALÁ
+
+ERICK PIETRO
+
+JULIO CESAR
+
+PEDRO HENRIQUE
+
+a. Qual seria a versão mais simples do seu projeto multidisciplinar, que ainda cumpre sua função principal?
+
+A versão mais simples do nosso projeto multidisciplinar seria um site básico do SIGACRC, onde o usuário pudesse preencher um formulário de solicitação de casamento civil, informar seus dados principais e anexar os documentos necessários. Essa versão já cumpriria a função principal do projeto, que é facilitar o início do processo de casamento civil de forma digital, organizada e mais prática para os usuários.
+
+b. Como essa versão poderia ajudar a validar a ideia sem incluir todas as funcionalidades desejadas?
+
+Essa versão simplificada ajudaria a validar a ideia porque permitiria testar se os usuários conseguem preencher o formulário corretamente, anexar os documentos e entender o funcionamento do sistema. Com isso, seria possível receber feedback sobre dificuldades, melhorar a organização das etapas e descobrir quais funções realmente são mais importantes antes de criar uma versão mais completa.
+
+c. Quais características essenciais devem ser apresentadas no projeto multidisciplinar para que a proposta seja útil para os usuários?
+
+As características essenciais do projeto devem ser uma interface simples e intuitiva, formulário organizado por etapas, campos claros para preenchimento dos dados, área para anexar documentos, mensagem final de confirmação e um sistema que ajude a equipe responsável a visualizar as informações enviadas. Essas características tornam o sistema útil, pois facilitam o atendimento e reduzem erros no envio das informações.
+
+d. Quais funcionalidades do projeto multidisciplinar poderiam ser deixadas de fora na primeira versão, mas que poderiam ser adicionadas posteriormente?
+
+Na primeira versão, poderiam ficar de fora funcionalidades mais avançadas, como login completo para diferentes perfis, painel administrativo detalhado, notificações automáticas por e-mail, acompanhamento do status do processo, integração com sistemas externos, validação automática de documentos e geração de relatórios. Essas funções poderiam ser adicionadas depois, conforme o projeto fosse testado e melhorado com base no feedback dos usuários.
+
+e. Qual é a importância de lançar uma versão simplificada do projeto multidisciplinar antes de se comprometer com um produto final completo?
+
+Lançar uma versão simplificada é importante porque permite testar a ideia principal com menos tempo e menos esforço. Assim, a equipe consegue identificar problemas, entender as necessidades dos usuários e corrigir falhas antes de desenvolver o sistema completo. Isso reduz riscos, evita retrabalho e ajuda a criar um produto final mais eficiente e adequado ao público.

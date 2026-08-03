@@ -1,0 +1,37 @@
+SEMANA 10 / AULA 01
+
+BRUNO DE LIMA
+
+BRUNO HENRIQUE
+
+ERICK PIETRO 
+
+EMILI BACCALÁ
+
+JULIO CESAR
+
+1. Revisão do projeto
+a) Qual problema nosso projeto resolve?
+
+O SIGACRC resolve a dificuldade de organizar e controlar os processos de casamento civil no cartório. Ele ajuda a reduzir erros, evitar perda de informações e tornar o atendimento mais rápido e eficiente.
+
+b) Quem se beneficiaria dessa solução?
+
+Os principais beneficiados são os funcionários do cartório, como escreventes e atendentes, que precisam organizar documentos e informações. Os cidadãos que dão entrada no casamento civil também seriam beneficiados com um atendimento mais ágil.
+
+2. Identificação do público-alvo
+a) Idade
+
+O público-alvo são adultos, principalmente pessoas entre 18 e 60 anos, incluindo funcionários do cartório e cidadãos maiores de idade que procuram o serviço de casamento civil.
+
+b) Localização
+
+O público está em cidades e regiões urbanas onde existem cartórios de registro civil. O sistema pode atender principalmente cartórios de pequeno e médio porte.
+
+c) Interesses e comportamentos
+
+Esse público busca organização, rapidez, segurança nas informações e facilidade no atendimento. Os funcionários precisam de uma ferramenta simples para consultar e registrar dados.
+
+d) Necessidades e desafios
+
+O público precisa reduzir erros, organizar documentos, facilitar consultas e diminuir a demora no atendimento. O SIGACRC ajuda centralizando as informações do processo de casamento em um sistema mais prático.

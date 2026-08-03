@@ -1,0 +1,10 @@
+AULA 01
+ 
+Imagem em anexo.
+ 
+AULA 02
+
+O fine-tuning tradicional é proibitivamente caro devido a três fatores principais destacados na imagem:
+Necessidade de Hardware de Alto Desempenho: O processo exige GPUs poderosas, como a A100, que possuem alto custo de aluguel por hora na nuvem ou um preço de compra elevado. [1, 2]
+Alto Consumo de Memória (VRAM): É necessário uma quantidade massiva de memória gráfica (40+ GB VRAM no exemplo) para processar o treinamento de um modelo grande. [1, 2]
+Alto Custo Computacional e de Tempo: O treinamento envolve atualizar 100% dos parâmetros do modelo (centenas de milhões ou bilhões), o que demanda muito tempo (dias) e processamento contínuo

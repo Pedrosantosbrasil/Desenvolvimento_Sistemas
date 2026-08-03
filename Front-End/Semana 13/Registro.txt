@@ -1,0 +1,15 @@
+Foi adicionado lang="pt-BR" na tag <html>.
+Foi incluída a meta tag viewport para melhorar a visualização em dispositivos móveis.
+A estrutura da página, usando <main> e <section>.
+ atributo alt .
+Foi criado um <label> .
+O botão deixou de ser apenas "+" agora e  "Adicionar tarefa".
+Novas cores.
+
+
+(:focus) para facilitar a navegação por teclado.O feedback ao usuário passou a usar aria-live="polite" para ser anunciado por leitores de tela.
+A lista de tarefas recebeu aria-label.
+Foi implementada a adição de tarefas ao pressionar a tecla Enter.
+
+Foi adicionado o uso de Intl.DateTimeFormat .
+Foi adicionado o uso de Intl.NumberFormat para exibir valores

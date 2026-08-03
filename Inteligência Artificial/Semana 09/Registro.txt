@@ -1,0 +1,17 @@
+Bruno de Lima
+
+Eric Diniz Monteiro
+
+Pedro Henrique Santos
+
+Por que o Inception-V3 é uma boa "referência"?
+
+      R: Tem Treinado em milhões de imagens reais e Reconhece 1000 categorias diferentes.
+
+2.     Diferença entre Inception Score (IS) e FID?
+
+      R: Inception score verifica a diversidade, Fid semelha e avalia com imagens reais.
+
+3.     Como os limiares (IS > 5.0, FID < 50) ajudam?
+
+      R: Apenas avalia, não ajuda.

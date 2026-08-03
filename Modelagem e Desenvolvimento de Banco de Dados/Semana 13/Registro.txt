@@ -1,0 +1,149 @@
++---------------------------+
+| Log                       |
++---------------------------+
+| --- CLIENTES INICIAIS --- |
++---------------------------+
++------------+--------------+---------------------+----------------+--------------+---------------+
+| id_cliente | nome         | email               | status_cliente | tipo_cliente | data_cadastro |
++------------+--------------+---------------------+----------------+--------------+---------------+
+|          1 | Ana Souza    | ana@datassoft.com   | Ativo          | online       | 2026-06-01    |
+|          2 | Bruno Lima   | bruno@datassoft.com | Ativo          | online       | 2026-06-02    |
+|          3 | Carla Mendes | carla@datassoft.com | Ativo          | presencial   | 2026-06-03    |
+|          4 | Diego Alves  | diego@datassoft.com | Inativo        | online       | 2026-06-04    |
++------------+--------------+---------------------+----------------+--------------+---------------+
++--------------------------+
+| Log                      |
++--------------------------+
+| --- PEDIDOS INICIAIS --- |
++--------------------------+
++-----------+------------+-------------+-------------+
+| id_pedido | id_cliente | data_pedido | status      |
++-----------+------------+-------------+-------------+
+|         1 |          1 | 2026-06-01  | Pendente    |
+|         2 |          1 | 2026-06-02  | Processando |
+|         3 |          1 | 2026-06-03  | Cancelado   |
+|         4 |          2 | 2026-06-04  | Enviado     |
+|         5 |          3 | 2026-06-05  | Pendente    |
+|         6 |          3 | 2026-06-06  | Cancelado   |
+|         7 |          4 | 2023-01-10  | Pendente    |
++-----------+------------+-------------+-------------+
++----------------------------+
+| Log                        |
++----------------------------+
+| --- CLIENTES PREMIADOS --- |
++----------------------------+
++--------------+------------+-----------+---------------------+
+| id_premiacao | id_cliente | nome      | data_premiacao      |
++--------------+------------+-----------+---------------------+
+|            1 |          1 | Ana Souza | 2026-06-08 10:39:04 |
++--------------+------------+-----------+---------------------+
++------------------------------------------+
+| Log                                      |
++------------------------------------------+
+| --- PEDIDOS APÓS ATUALIZAR INATIVOS ---  |
++------------------------------------------+
++-----------+------------+-------------+-------------+
+| id_pedido | id_cliente | data_pedido | status      |
++-----------+------------+-------------+-------------+
+|         1 |          1 | 2026-06-01  | Pendente    |
+|         2 |          1 | 2026-06-02  | Processando |
+|         3 |          1 | 2026-06-03  | Cancelado   |
+|         4 |          2 | 2026-06-04  | Enviado     |
+|         5 |          3 | 2026-06-05  | Pendente    |
+|         6 |          3 | 2026-06-06  | Cancelado   |
+|         7 |          4 | 2023-01-10  | Revisar     |
++-----------+------------+-------------+-------------+
++----------------------------------------+
+| Log                                    |
++----------------------------------------+
+| --- PEDIDOS APÓS LIMPEZA (2 ANOS) ---  |
++----------------------------------------+
++-----------+------------+-------------+-------------+
+| id_pedido | id_cliente | data_pedido | status      |
++-----------+------------+-------------+-------------+
+|         1 |          1 | 2026-06-01  | Pendente    |
+|         2 |          1 | 2026-06-02  | Processando |
+|         3 |          1 | 2026-06-03  | Cancelado   |
+|         4 |          2 | 2026-06-04  | Enviado     |
+|         5 |          3 | 2026-06-05  | Pendente    |
+|         6 |          3 | 2026-06-06  | Cancelado   |
++-----------+------------+-------------+-------------+
++------------------------------------------+
+| Log                                      |
++------------------------------------------+
+| --- ALERTAS (TRIGGER INSERT CLIENTE) --- |
++------------------------------------------+
++-----------+---------------------------------------+---------------------+
+| id_alerta | mensagem                              | data_alerta         |
++-----------+---------------------------------------+---------------------+
+|         1 | Novo cliente cadastrado: Elaine Rocha | 2026-06-08 10:39:04 |
++-----------+---------------------------------------+---------------------+
++-------------------------------------------+
+| Log                                       |
++-------------------------------------------+
+| --- AUDITORIA (TRIGGER UPDATE PEDIDO) --- |
++-------------------------------------------+
++--------------+-----------+---------------+-------------+---------------------+
+| id_auditoria | id_pedido | status_antigo | status_novo | data_atualizacao    |
++--------------+-----------+---------------+-------------+---------------------+
+|            1 |         1 | Pendente      | Processando | 2026-06-08 10:39:04 |
++--------------+-----------+---------------+-------------+---------------------+
++-----------------------------------------+
+| Log                                     |
++-----------------------------------------+
+| --- CLIENTES APÓS EXCLUSÃO (ID 3) ---   |
++-----------------------------------------+
++------------+--------------+----------------------+----------------+--------------+---------------+
+| id_cliente | nome         | email                | status_cliente | tipo_cliente | data_cadastro |
++------------+--------------+----------------------+----------------+--------------+---------------+
+|          1 | Ana Souza    | ana@datassoft.com    | Ativo          | online       | 2026-06-01    |
+|          2 | Bruno Lima   | bruno@datassoft.com  | Ativo          | online       | 2026-06-02    |
+|          4 | Diego Alves  | diego@datassoft.com  | Inativo        | online       | 2026-06-04    |
+|          5 | Elaine Rocha | elaine@datassoft.com | Ativo          | online       | 2026-06-08    |
++------------+--------------+----------------------+----------------+--------------+---------------+
++--------------------------------------------+
+| Log                                        |
++--------------------------------------------+
+| --- PEDIDOS APÓS EXCLUSÃO EM CASCATA ---   |
++--------------------------------------------+
++-----------+------------+-------------+-------------+
+| id_pedido | id_cliente | data_pedido | status      |
++-----------+------------+-------------+-------------+
+|         1 |          1 | 2026-06-01  | Processando |
+|         2 |          1 | 2026-06-02  | Processando |
+|         3 |          1 | 2026-06-03  | Cancelado   |
+|         4 |          2 | 2026-06-04  | Enviado     |
++-----------+------------+-------------+-------------+
+
+
+
+1. Qual é a diferença entre DDL e DML? Dê um exemplo de cada.
+R: DDL Comandos que criam ou alteram a
+estrutura e DML Comandos que manipulam os dados. Create, DROP E ALTER DML INSERT, UPDATE e DELETE.
+
+2. Por que uma chave primária é importante em uma tabela?
+R: Identifica cada registro de forma única.
+
+3. Para que serve uma chave estrangeira?
+R: Liga uma tabela a outra.
+
+4. O que o JOIN permite fazer?
+Junta informações de tabelas
+relacionas.
+
+5. Quando usamos GROUP BY e HAVING?
+R: Usamos o GROUP BY para agrupar linhas com valores idênticos e o HAVING para filtrar esses grupos
+6. Por que o NOT EXISTS ajuda a evitar dados duplicados?
+Porque ele verifica se o registro já existe no banco de dados antes de permitir uma nova inserção. Se existir, ele barra a operação.
+
+7. O que uma trigger faz?
+É um gatilho automático que executa uma ação (como validar, atualizar ou registrar dados) sempre que um evento de inserção, alteração ou exclusão acontece na tabela.
+
+8. Por que registrar auditoria de alterações pode ser importante?
+Para manter um histórico de segurança, permitindo rastrear quem alterou o quê, quando e por quê, além de ajudar a recuperar dados por erros humanos.
+
+9. Por que bloquear a exclusão de pedidos enviados é uma boa prática?
+Para garantir a integridade dos dados e do financeiro. Um pedido enviado gera nota fiscal e estoque movimentado; apagá-lo causaria furos na contabilidade e na logística.
+
+10. Explique com suas palavras a analogia da trigger como alarme automático.
+A trigger funciona exatamente como um alarme residencial com sensor de movimento: você não precisa ligá-lo manualmente. Ele fica "escutando" a casa e, assim que uma porta é aberta, ele dispara a reação programada instantaneamente.
