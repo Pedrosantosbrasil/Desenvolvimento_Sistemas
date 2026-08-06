@@ -1,0 +1,103 @@
+CREATE TABLE produtos (
+    
+    id_produto INT PRIMARY KEY AUTO_INCREMENT,
+    
+    nome VARCHAR(100),
+    categoria VARCHAR(100),
+    
+    preco DECIMAL(10,2)
+);
+
+CREATE TABLE vendas (
+    id_venda INT PRIMARY KEY AUTO_INCREMENT,
+    id_produto INT,
+    quantidade INT,
+    data_venda DATE,
+    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
+    
+);
+
+
+INSERT INTO produtos (nome, categoria, preco) VALUES
+('Teclado', 'Periféricos', 150.00),
+('Mouse', 'Periféricos', 80.00),
+('Monitor', 'Hardware', 900.00),
+('Notebook', 'Hardware', 3500.00);
+
+
+INSERT INTO vendas (id_produto, quantidade, data_venda) VALUES
+(1, 2, '2026-02-10'),
+(2, 3, '2026-02-12'),
+(1, 1, '2026-03-05'),
+(2, 2, '2026-03-05'),
+(3, 1, '2026-03-10'),
+(4, 1, '2026-03-15'),
+(2, 5, '2026-03-20'),
+(1, 1, '2026-04-02'),
+(2, 1, '2026-04-03'),
+(3, 2, '2026-04-10');
+
+SELECT * FROM produtos;
+SELECT * FROM vendas;
+
+-- Produto mais vendido nos últimos 3 meses
+SELECT 
+    p.nome, 
+    -- SUM(): Soma os valores da coluna nas linhas agrupadas.
+    SUM(v.quantidade) AS total
+FROM produtos p
+
+-- JOIN: Cruza tabelas. Só traz os resultados onde a condição 'ON' existe em ambas.
+JOIN vendas v ON p.id_produto = v.id_produto
+
+-- DATE_SUB(): Subtrai um período de uma data.
+-- CURDATE(): Retorna a data do dia da execução.
+WHERE v.data_venda >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH)
+-- GROUP BY: Agrupa a soma matemática para cada nome diferente, em vez de somar a tabela inteira de uma vez.
+GROUP BY p.nome
+-- ORDER BY ... DESC: Ordena os totais do maior para o menor.
+ORDER BY total DESC
+-- LIMIT 1: Mostra apenas a primeira linha.
+LIMIT 1;
+
+-- Faturamento por categoria em Março
+SELECT 
+    p.categoria, 
+    SUM(v.quantidade * p.preco) AS total
+FROM produtos p
+JOIN vendas v ON p.id_produto = v.id_produto
+-- BETWEEN: Filtra um intervalo de valores. 
+WHERE v.data_venda BETWEEN '2026-03-01' AND '2026-03-31'
+GROUP BY p.categoria;
+-- CONSEQUÊNCIA DO ERRO DE MODELAGEM: Esse 'p.preco' vai pegar o preço de hoje do produto 
+-- para calcular o lucro de março. Se o preço subiu em abril, esse relatório relatará lucros falsos.
+
+-- Média de produtos
+SELECT 
+    -- AVG(): Calcula a média aritmética da coluna.
+    AVG(quantidade)
+FROM vendas
+WHERE data_venda >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH);
+
+
+-- Maior e menor transação
+SELECT 
+    -- MAX(): Encontra o maior valor após o cálculo na linha.
+    MAX(v.quantidade * p.preco) AS maior,
+    -- MIN(): Encontra o menor valor.
+    MIN(v.quantidade * p.preco) AS menor
+FROM vendas v
+JOIN produtos p ON p.id_produto = v.id_produto
+WHERE v.data_venda >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH);
+-- MESMO ERRO DE MODELAGEM: Está usando o preço presente para distorcer um valor histórico.
+
+-- Categoria com maior volume
+SELECT 
+    p.categoria, 
+    SUM(v.quantidade) AS total
+FROM produtos p
+JOIN vendas v ON p.id_produto = v.id_produto
+WHERE v.data_venda >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH)
+GROUP BY p.categoria
+ORDER BY total DESC
+LIMIT 1;

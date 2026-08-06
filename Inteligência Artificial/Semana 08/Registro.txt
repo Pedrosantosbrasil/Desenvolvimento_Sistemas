@@ -1,0 +1,64 @@
+
+
+
+Aula 01:
+
+Usando a analogia da aula, explique com suas palavras a diferença entre o processo direto e o processo inverso.
+
+R: Basicamente como o nome ja diz o processo direto fala sobre um timestep que é uma passada uma passada de tempo ja o inverso o escultor precisa fazer literalmente o sistema reverso do primeiro, como no primeiro o castelo de areia foi destruido pelo vento aos poucos e aos poucos ele vai reconstruir ele.
+
+
+
+
+Qual é a única tarefa que a IA precisa realizar em cada passo do processo inverso para conseguir reconstruir uma imagem?
+
+R: A tarefa central da ia é estimar a distribuição da imagem limpa a partir de uma imagem barulhenta.
+
+
+
+
+Por que o step scheduler é tão importante? O que aconteceria se o "plano" do escultor fosse ruim?
+
+R: Step scheduler é muito importante porque é estratégia base para guiar para a rem
+
+
+
+
+Aula 02:
+
+1 - O que é o beta schedule e qual o seu papel no processo de difusão?
+
+        R: É uma lista de valores, um para cada timestep, que define o quão "forte" será a adição de ruído naquele passo específico. Um valor de beta pequeno significa uma rajada de vento suave (pouco ruído). Um valor de beta grande significa uma ventania (muito ruído).
+
+2 - Qual a principal diferença visual e prática entre um beta schedule linear e um de cosseno?
+
+        R:A principal diferença entre um beta schedule linear e um de cosseno em modelos de difusão está na taxa de adição de ruído ao longo do processo de geração, o que altera a velocidade com que a imagem original se degrada
+
+3 - Por que a estratégia de agendamento de ruído é importante? Como ela afeta o aprendizado da IA?
+
+      R:Porque a forma como o ruído é adicionado (processo direto) afeta diretamente a habilidade da IA de removê-lo (processo inverso).
+
+
+
+
+Aula 03:
+
+1 - Qual é a principal função da rede UNet no processo de difusão?
+
+R: Sua principal função é receber uma imagem com ruído e prever o padrão de ruído que está presente naquela imagem. Em outras palavras, ela não reconstrói a imagem limpa diretamente, mas sim gera um "mapa do ruído" que precisa ser removido para revelar a imagem desejada.
+
+
+
+
+2 - Explique a relação entre a UNet e o denoiser. Um poderia existir sem o outro nesse contexto?
+
+R: Eles funcionam juntos no contexto de geração de imagens, onde a UNet atua como o denoiser.No entanto, o "denoising" pode ser feito por outras arquiteturas (Transformers), e a UNet pode ser usada para outras tarefas (segmentação).
+
+
+
+
+3 - Se você quisesse gerar uma imagem muito criativa e artística, que pode não ser 100% fiel ao seu prompt, você usaria um valor de guidance scale alto ou baixo? Por quê?
+
+R: Para gerar imagens artísticas e criativas, usar o valor guidance scale menor. Isso dá liberdade para a IA improvisar, priorizando a estética e a originalidade em vez da fidelidade literal ao prompt.
+
+
